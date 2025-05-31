@@ -1,0 +1,33 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#1e293b" />
+  <rect x="50" y="50" width="700" height="500" rx="30" ry="30" fill="url(#grad1)" opacity="0.3" />
+  
+  <!-- Email Icon -->
+  <rect x="200" y="150" width="100" height="70" rx="10" ry="10" fill="#ffffff" opacity="0.8" />
+  <path d="M200 170 L250 210 L300 170" stroke="#1e293b" stroke-width="5" fill="none" />
+  <text x="250" y="260" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Email</text>
+  
+  <!-- Phone Icon -->
+  <rect x="500" y="150" width="70" height="100" rx="10" ry="10" fill="#ffffff" opacity="0.8" />
+  <circle cx="535" cy="220" r="10" fill="#1e293b" />
+  <text x="535" y="260" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Phone</text>
+  
+  <!-- LinkedIn Icon -->
+  <rect x="200" y="350" width="100" height="100" rx="10" ry="10" fill="#ffffff" opacity="0.8" />
+  <text x="250" y="400" font-family="Arial" font-size="30" fill="#1e293b" text-anchor="middle">in</text>
+  <text x="250" y="480" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">LinkedIn</text>
+  
+  <!-- GitHub Icon -->
+  <circle cx="535" cy="400" r="50" fill="#ffffff" opacity="0.8" />
+  <circle cx="535" cy="385" r="15" fill="#1e293b" />
+  <rect x="510" y="405" width="50" height="25" rx="12.5" ry="12.5" fill="#1e293b" />
+  <text x="535" y="480" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">GitHub</text>
+  
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Get In Touch</text>
+</svg>
