@@ -24,7 +24,7 @@ export default function Home() {
             targetElement.scrollIntoView({
               behavior: "smooth"
             });
-            
+
             // Update URL without page reload
             window.history.pushState(null, "", href);
           }
@@ -33,24 +33,22 @@ export default function Home() {
     };
 
     document.addEventListener("click", handleSmoothScroll);
-    
+
     return () => {
       document.removeEventListener("click", handleSmoothScroll);
     };
   }, []);
 
   return (
-    <div className="bg-[#060D21] text-gray-200 font-inter min-h-screen">
+    <div className="bg-[#060D21] text-gray-200 font-inter min-h-screen p-4 sm:p-6 md:p-8 lg:p-10">
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Education />
-        <Projects />
-        <GitHubStats />
-        <Contact />
-      </main>
+      <Hero />
+      <About />
+      <Skills />
+      <Education />
+      <Projects />
+      <GitHubStats />
+      <Contact />
       <Footer />
       <BackToTop />
     </div>

@@ -6,7 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 export default function Contact() {
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,7 +23,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
@@ -53,14 +53,14 @@ export default function Contact() {
         title: "Success!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
-      
+
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: ""
       });
-      
+
       setLoading(false);
     }, 1500);
   };
@@ -70,8 +70,8 @@ export default function Contact() {
       icon: "fas fa-envelope",
       title: "Email",
       description: "Feel free to email me",
-      link: "mailto:faisal@example.com",
-      linkText: "faisal@example.com"
+      link: "mailto:heyahammad.rox@gmail.com",
+      linkText: "heyahammad.rox@gmail.com"
     },
     {
       icon: "fas fa-map-marker-alt",
@@ -85,9 +85,9 @@ export default function Contact() {
       title: "Social Profiles",
       description: "Connect with me",
       socialLinks: [
-        { icon: "fab fa-github", url: "https://github.com/" },
-        { icon: "fab fa-linkedin", url: "https://linkedin.com/in/" },
-        { icon: "fab fa-twitter", url: "https://twitter.com/" }
+        { icon: "fab fa-github", url: "https://github.com/heyahammad" },
+        { icon: "fab fa-linkedin", url: "https://linkedin.com/heyahammad" },
+        { icon: "fab fa-instagram", url: "https://twitter.com/heyahammad" }
       ]
     }
   ];
@@ -95,7 +95,7 @@ export default function Contact() {
   return (
     <section id="contact" ref={ref} className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -104,10 +104,10 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-2">Get In <span className="text-primary">Touch</span></h2>
           <div className="w-24 h-1 bg-accent mx-auto"></div>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {contactItems.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -119,11 +119,11 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold mb-2 font-poppins">{item.title}</h3>
               <p className="text-gray-300 mb-2">{item.description}</p>
-              
+
               {item.link && (
-                <motion.a 
+                <motion.a
                   whileHover={{ color: "#EC4899" }}
-                  href={item.link} 
+                  href={item.link}
                   target={item.link.startsWith("https") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="text-primary hover:text-accent transition-colors"
@@ -131,15 +131,15 @@ export default function Contact() {
                   {item.linkText}
                 </motion.a>
               )}
-              
+
               {item.socialLinks && (
                 <div className="flex space-x-4">
                   {item.socialLinks.map((social, idx) => (
-                    <motion.a 
+                    <motion.a
                       key={idx}
                       whileHover={{ y: -3, color: "#EC4899" }}
-                      href={social.url} 
-                      target="_blank" 
+                      href={social.url}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:text-accent transition-colors"
                     >
@@ -151,79 +151,79 @@ export default function Contact() {
             </motion.div>
           ))}
         </div>
-        
-        <motion.div 
+
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-12 bg-dark-secondary rounded-lg p-8 shadow-lg"
         >
           <h3 className="text-2xl font-bold mb-6 font-poppins text-center">Send Me a Message</h3>
-          
+
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
+                <input
+                  type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Enter your name" 
-                  className="w-full px-4 py-3 bg-dark-DEFAULT border border-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 bg-primary border border-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white"
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
+                <input
+                  type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Enter your email" 
+                  placeholder="Enter your email"
                   className="w-full px-4 py-3 bg-dark-DEFAULT border border-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white"
                   required
                 />
               </div>
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-              <input 
-                type="text" 
-                id="subject" 
+              <input
+                type="text"
+                id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Enter subject" 
+                placeholder="Enter subject"
                 className="w-full px-4 py-3 bg-dark-DEFAULT border border-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white"
                 required
               />
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-              <textarea 
-                id="message" 
+              <textarea
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows={5} 
-                placeholder="Enter your message..." 
+                rows={5}
+                placeholder="Enter your message..."
                 className="w-full px-4 py-3 bg-dark-DEFAULT border border-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white resize-none"
                 required
               ></textarea>
             </div>
-            
+
             <div className="text-center">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                type="submit" 
+                type="submit"
                 className="px-8 py-3 bg-primary hover:bg-primary-hover text-white font-medium rounded-lg transition-colors inline-flex items-center"
                 disabled={loading}
               >
@@ -243,7 +243,7 @@ export default function Contact() {
               </motion.button>
             </div>
           </form>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

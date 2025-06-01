@@ -88,7 +88,7 @@ export default function GitHubStats() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-2 text-white">GitHub <span className="text-primary">Contributions</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-2 text-white">GitHub</h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
         </motion.div>
         

@@ -42,7 +42,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-poppins text-gray-300 absolute left-0 right-0 md:right-auto"
               >
-                React Developer
+                Developer
               </motion.h2>
             </div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
 
               <motion.a
                 whileHover={{ y: -3 }}
-                href="https://instagram.com/ahammad.dev"
+                href="https://instagram.com/heyahammad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl text-gray-400 hover:text-primary transition-colors"
@@ -119,7 +119,7 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Circle background for profile image */}
-              <div className="w-66 h-46 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto rounded-lg bg-gradient-to-r from-primary/30 to-indigo-600/30 p-[2px]">
+              <div className="w-64 h-64 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto rounded-lg bg-gradient-to-r from-primary/30 to-indigo-600/30 p-[2px]">
                 <div className="w-full h-full rounded-lg overflow-hidden border-2 border-white/20 backdrop-blur-sm">
                   <img
                     src="/images/dp4.png"
@@ -134,7 +134,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="absolute top-0 -right-4 sm:right-0 md:-right-4 bg-[#0f1631]/70 backdrop-blur-md border border-[#1e2a45] rounded-lg p-3 shadow-lg hidden sm:block"
+                className="absolute -top-5 -right-4 sm:right-0 md:-right-4 bg-[#0f1631]/70 backdrop-blur-md border border-[#1e2a45] rounded-lg p-3 shadow-lg hidden sm:block"
               >
                 <div className="text-xs md:text-sm font-mono">
                   <span className="text-gray-400">function</span> <span className="text-primary">developer</span><span className="text-white">()</span> <span className="text-gray-400">{"{"}</span><br />
@@ -148,7 +148,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
-                className="absolute -bottom-5 -left-6  sm:left-0 md:-left-0 bg-[#0f1631]/70 backdrop-blur-md border border-[#1e2a45] rounded-lg p-3 shadow-lg"
+                className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 sm:left-0 sm:translate-x-0 bg-[#0f1631]/70 backdrop-blur-md border border-[#1e2a45] rounded-lg p-3 shadow-lg"
               >
                 <div className="flex items-center">
                   <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
@@ -161,11 +161,12 @@ export default function Hero() {
       </div>
 
       {/* Scroll down indicator */}
+      {/* Scroll down indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="hidden sm:flex absolute bottom-14 left-1/2 transform -translate-x-1/2 flex-col items-center"
       >
         <span className="text-gray-400 text-sm mb-2">Scroll Down</span>
         <motion.div
@@ -175,6 +176,7 @@ export default function Hero() {
           <i className="fas fa-chevron-down text-primary"></i>
         </motion.div>
       </motion.div>
+
     </section>
   );
 }

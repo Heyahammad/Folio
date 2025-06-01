@@ -3,27 +3,27 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function About() {
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
-  
+
   const stats = [
-    { 
-      icon: "fas fa-laptop-code", 
-      value: "10+", 
-      label: "Projects Completed" 
+    {
+      icon: "fas fa-laptop-code",
+      value: "10+",
+      label: "Projects Completed"
     },
-    { 
-      icon: "fas fa-code", 
-      value: "5+", 
-      label: "Technologies" 
+    {
+      icon: "fas fa-code",
+      value: "5+",
+      label: "Technologies"
     },
-    { 
-      icon: "fas fa-award", 
-      value: "5.0", 
-      label: "SSC & HSC GPA" 
+    {
+      icon: "fas fa-award",
+      value: "5.0",
+      label: "SSC & HSC GPA"
     },
-    { 
-      icon: "fas fa-book", 
-      value: "3", 
-      label: "Years of Study" 
+    {
+      icon: "fas fa-book",
+      value: "3",
+      label: "Years of Study"
     }
   ];
 
@@ -47,9 +47,9 @@ export default function About() {
       {/* Background gradient blur effects */}
       <div className="absolute top-1/3 -left-20 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-1/3 -right-20 w-72 h-72 bg-indigo-600/10 rounded-full filter blur-3xl"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -58,9 +58,9 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-2 text-white">About <span className="text-primary">Me</span></h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-2"></div>
         </motion.div>
-        
+
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -74,27 +74,27 @@ export default function About() {
               I'm passionate about creating responsive and user-friendly web applications using React and other modern technologies. My academic excellence extends back to my school days where I achieved a GPA of 5.0 in both HSC and SSC examinations.
             </p>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Currently, I'm expanding my skillset by learning AI and Machine Learning alongside my expertise in React, JavaScript, CSS, Java, and C.
+              Currently, I'm expanding my skillset by learning AI and Machine Learning alongside my expertise in React, JavaScript, CSS, Java, C, C++, and Python.
             </p>
-            
+
             <div className="mt-8 flex flex-wrap gap-4">
-              <motion.div 
+              <motion.div
                 whileHover={{ y: -5 }}
                 className="bg-[#0f1631]/80 backdrop-blur-sm rounded-lg p-4 shadow-md flex-1 min-w-[140px] border border-[#1e2a45]"
               >
                 <h4 className="font-bold text-lg mb-1 font-poppins text-white">Education</h4>
                 <p className="text-gray-400">CSE Student</p>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 whileHover={{ y: -5 }}
                 className="bg-[#0f1631]/80 backdrop-blur-sm rounded-lg p-4 shadow-md flex-1 min-w-[140px] border border-[#1e2a45]"
               >
                 <h4 className="font-bold text-lg mb-1 font-poppins text-white">Experience</h4>
                 <p className="text-gray-400">React Development</p>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 whileHover={{ y: -5 }}
                 className="bg-[#0f1631]/80 backdrop-blur-sm rounded-lg p-4 shadow-md flex-1 min-w-[140px] border border-[#1e2a45]"
               >
@@ -102,20 +102,20 @@ export default function About() {
                 <p className="text-primary text-xl font-bold">3.84</p>
               </motion.div>
             </div>
-            
+
             <div className="mt-8">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#contact" 
+                href="#contact"
                 className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-md transition-colors"
               >
                 <i className="fas fa-paper-plane mr-2"></i> Get In Touch
               </motion.a>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             variants={container}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
