@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
 
             <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 mx-auto md:mx-0 max-w-md md:max-w-lg">
-              A passionate developer with expertise in React and a strong academic background. Currently studying Computer Science at University of Liberal Arts Bangladesh.
+              A passionate developer with expertise in React, Java, and Python. Currently studying Computer Science at University of Liberal Arts Bangladesh.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
