@@ -68,7 +68,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4 font-poppins text-white">Who am I?</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              I'm Faisal Ahammad, a dedicated Computer Science student at the University of Liberal Arts Bangladesh, currently in my 3rd year with a strong CGPA of 3.84.
+              I'm Faisal Ahammad, a dedicated Computer Science student at the University of Liberal Arts Bangladesh, currently in my 3rd year with a good CGPA of 3.86.
             </p>
             <p className="text-gray-300 mb-4 leading-relaxed">
               I'm passionate about creating responsive and user-friendly web applications using React and other modern technologies. My academic excellence extends back to my school days where I achieved a GPA of 5.0 in both HSC and SSC examinations.
@@ -99,7 +99,7 @@ export default function About() {
                 className="bg-[#0f1631]/80 backdrop-blur-sm rounded-lg p-4 shadow-md flex-1 min-w-[140px] border border-[#1e2a45]"
               >
                 <h4 className="font-bold text-lg mb-1 font-poppins text-white">CGPA</h4>
-                <p className="text-primary text-xl font-bold">3.84</p>
+                <p className="text-primary text-xl font-bold">3.86</p>
               </motion.div>
             </div>
 
